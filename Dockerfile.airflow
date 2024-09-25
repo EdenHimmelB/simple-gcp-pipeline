@@ -7,9 +7,8 @@ USER airflow
 RUN pip install -r requirements.txt --no-cache-dir
 
 USER root
-RUN mkdir -p /opt/airflow/spark-lib
 RUN apt-get update && \
-    apt-get install -y openjdk-17-jre zstd && \
+    apt-get install -y openjdk-17-jre && \
     # Delete apt cache to reduce image size
     rm -rf /var/lib/apt/lists/*
 
