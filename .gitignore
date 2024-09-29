@@ -12,4 +12,7 @@ airflow/logs/
 airflow/plugins/
 airflow/*/__pycache__
 
-.keys/
+./keys/
+./data/
+
+.gitignore
