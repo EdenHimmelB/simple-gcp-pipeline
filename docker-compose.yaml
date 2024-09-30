@@ -35,6 +35,7 @@ x-airflow-common:
     BIGQUERY_DATASET: ${BIGQUERY_DATASET}
     BIGQUERY_TABLE: ${BIGQUERY_TABLE}
     GOOGLE_STORAGE_BUCKET: ${GOOGLE_STORAGE_BUCKET}
+    TARGET_URL: ${TARGET_URL}
   volumes:
     - ./airflow/dags:/opt/airflow/dags
     - ./airflow/spark-jobs:/opt/airflow/spark-jobs
