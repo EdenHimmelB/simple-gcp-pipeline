@@ -77,11 +77,6 @@ if __name__ == "__main__":
     df = spark.read.option("multiline", "true").text(input_path)
     df = ndjson_to_structure_data(df)
 
-    (
-        df.write.format("parquet")
-        .mode("overwrite")
-        .option("compression", "zstd")
-        .save(output_path)
-    )
+    df.write.mode("overwrite").format("parquet").save(output_path)
 
     spark.stop()
